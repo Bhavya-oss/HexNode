@@ -1,0 +1,132 @@
+.hero-background {
+  background-color: #020a19;
+  padding: 85px 0 30px;
+}
+
+.hero {
+  width: 88%;
+  margin: auto;
+}
+
+h1 {
+  text-align: left;
+  color: #bfc1c599;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.h2-hero {
+  text-align: left;
+  line-height: 53px;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.p-hero {
+  color: #ffffffbf;
+  line-height: 28px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.max-w-554 {
+  max-width: 554px;
+}
+.max-w-610 {
+  max-width: 610px;
+}
+
+.hero-group {
+  padding: 10px 20px 10px 45px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  border-radius: 21px;
+  align-items: center;
+  justify-content: center;
+}
+
+.check {
+  width: 33px;
+  height: 33px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 21px;
+  align-items: center;
+  top: 12%;
+  left: 2%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+
+.banner_tick-animate-wrap__7tPRE .banner_tick-animate__Cw5VR {
+  transition: transform 0.7s ease-in-out;
+}
+
+.translate-y-minus-50 {
+  transform: translateY(-50%);
+}
+
+.translate-y-minus-50-and-minus-5 {
+  transform: translate(-50%, -5%);
+}
+
+.translate-x-minus-2 {
+  transform: translateX(-2%);
+}
+
+.scale-y {
+  transform: scaleY(1);
+}
+
+.hero-group:hover .check {
+  transform: scale(20);
+  transition: transform 0.7s ease-in-out;
+}
+.group1-bg {
+  background-color: #fcd598;
+  top: 14%;
+  left: 6%;
+}
+
+.group2-bg {
+  background-color: #c3e1e7;
+  top: 40%;
+  right: -7%;
+}
+
+.group3-bg {
+  background-color: #bcdcbe;
+  bottom: 13%;
+  right: 26%;
+}
+.hero-points {
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 47%;
+  left: 5%;
+}
+.check-text {
+  line-height: 21px;
+  font-size: 20px;
+  color: rgba(2 10 25, 1);
+}
+
+.check1-color {
+  color: #fcd598;
+}
+
+.check2-color {
+  color: #c3e1e7;
+}
+
+.check3-color {
+  color: #bcdcbe;
+}

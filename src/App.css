@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  letter-spacing: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* width */
+.w-121 {
+  width: 121px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.w-100 {
+  width: 100%;
+}
+.w-88 {
+  width: 88%;
+}
+
+/* margin */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.align-item-center {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h-100 {
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.h1 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: #bfc1c599;
+}
+
+.h2 {
+}
+
+.h-53 {
+  height: 53px;
+}
+.color-h2 {
+  color: rgba(255, 255, 255, 1);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* margin */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  padding: 0px 10px;
+  height: 53px;
+  border-radius: 3px;
+  font-size: 17px;
+  line-height: 21px;
+  border: 0 solid #e5e7eb;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(205, 199, 199);
+}
+
+input:active {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: #dd0735;
+  padding: 10px 26px;
+  display: inline-block;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #a50527;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.top-0 {
+  top: 0;
+}
+
+/* padding */
+
+.py-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./components/navbar/NavBar";
 import Hero from "./components/Hero/Hero";
 import CompanyList from "./components/companylist/CompanyList";
+import WhyHexNode from "./components/whyhexnode/WhyHexNode";
 
 function Main() {
   return (
@@ -11,6 +12,7 @@ function Main() {
         {" "}
         <Hero />
         <CompanyList />
+        <WhyHexNode />
       </main>
     </div>
   );

@@ -15,11 +15,8 @@ a {
   color: inherit;
 }
 /* width */
-
-@media (min-width: 768px) {
-  .max-w-md-27 {
-    max-width: 27%;
-  }
+.w-auto {
+  width: auto;
 }
 
 .w-121 {
@@ -37,10 +34,25 @@ a {
   max-width: 1300px;
 }
 
+.max-w-28 {
+  max-width: 28px;
+}
+
 .max-w-156 {
   max-width: 156px;
 }
 
+.max-w-85 {
+  max-width: 85px;
+}
+
+.max-w-340 {
+  max-width: 340px;
+}
+
+.max-w-800 {
+  max-width: 800px;
+}
 .min-w-82 {
   min-width: 82px;
 }
@@ -50,22 +62,32 @@ a {
   margin-right: auto;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
 /* flex */
 .flex {
   display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .align-item-center {
   align-items: center;
 }
-@media (min-width: 768px) {
-  .align-item-baseline-md {
-    align-items: baseline;
-  }
+
+.align-item-flex-start {
+  align-items: flex-start;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .flex-row {
@@ -79,11 +101,23 @@ a {
 .items-center {
   align-items: center;
 }
+
+.block {
+  display: block;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
 /* flex-end */
 
 /* gap start */
 .gap-15 {
   gap: 15px;
+}
+
+.gap-9 {
+  gap: 9px;
 }
 /* gap end */
 
@@ -92,12 +126,20 @@ a {
   height: 100%;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .max-h-25 {
   max-height: 25px;
 }
 
+.max-h-240 {
+  max-height: 240px;
+}
+
 /* height end */
-.h1 {
+h1 {
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
@@ -105,12 +147,48 @@ a {
   color: #bfc1c599;
 }
 
-.h2 {
+h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  color: #020a19;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 26px;
+  color: #020a19;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #333333;
+  line-height: 24px;
+}
+
+@media (min-width: 768px) {
+}
+
+h4 {
+  font-size: 20px;
+  color: #020a19;
+  line-height: 32px;
+  font-weight: 700;
 }
 
 .h-53 {
   height: 53px;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .color-h2 {
   color: rgba(255, 255, 255, 1);
 }
@@ -167,6 +245,12 @@ button:hover {
   background-color: #a50527;
 }
 
+/* border radius start */
+.radius-10 {
+  border-radius: 10px;
+}
+/* border radius end */
+
 /* position Start*/
 .relative {
   position: relative;
@@ -187,29 +271,147 @@ button:hover {
   z-index: 2;
 }
 
-/* padding start */
+.z-5 {
+  z-index: 5;
+}
 
+.z-10 {
+  z-index: 10;
+}
+
+/* padding start */
+.pb-10 {
+  padding-bottom: 10px;
+}
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-15 {
+  padding-bottom: 15px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
 .py-30 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
+.py-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (max-width: 767) {
+  .hidden-sm {
+    display: none;
+  }
+}
+/* Styles for screens 768px and wider */
+@media (min-width: 768px) {
+  .py-md-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .align-item-baseline-md {
+    align-items: baseline;
+  }
+
+  .justify-between-md {
+    justify-content: space-between;
+  }
+
+  .hidden-md {
+    display: none;
+  }
+
+  .max-w-md-27 {
+    max-width: 27%;
+  }
+
+  .max-w-md-380 {
+    max-width: 380px;
+  }
+  .text-left-md {
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    line-height: 40px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .pb-md-60 {
+    padding-bottom: 60px;
+  }
+
+  .pb-md-20 {
+    padding-bottom: 20px;
+  }
+
+  .pt-md-40 {
+    padding-top: 40px;
+  }
+}
+
+/* Styles for screens 1024px and wider */
+@media (min-width: 1024px) {
+  .py-lg-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .px-lg-25 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .max-width-lg-40 {
+    max-width: 40px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+  .fs-lg-24 {
+    font-size: 24px;
+  }
+  .hidden-lg {
+    display: none;
+  }
+
+  .block-lg {
+    display: block;
+  }
+
+  .py-lg-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+/* Styles for screens 1280px and wider */
 @media (min-width: 1280px) {
   .px-xl-45 {
     padding-left: 45px;
     padding-right: 45px;
   }
-}
 
-@media (min-width: 1024px) {
-  .px-lg-25 {
-    padding-left: 25px;
-    padding-right: 25px;
+  .max-w-105 {
+    max-width: 105px;
   }
-}
-@media (min-width: 768px) {
-  .py-md-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
+
+  .block-xl {
+    display: block;
   }
 }

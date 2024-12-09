@@ -23,7 +23,7 @@ function CompanyList() {
 
   return (
     <React.Fragment>
-      <div className="py-30 bg">
+      <div className="py-30 companylist-bg">
         <div className="w-88 mx-auto max-w-1300">
           <div className="flex flex-row justify-between">
             {COMPANY_LIST_DATA.map((data) => {

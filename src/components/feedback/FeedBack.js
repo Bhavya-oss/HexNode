@@ -1,5 +1,5 @@
 import React from "react";
-import "FeedBackStyle.css";
+import "./FeedBackStyle.css";
 
 function FeedBack() {
   return <div>FeedBack</div>;

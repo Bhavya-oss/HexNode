@@ -39,7 +39,7 @@ h1 {
 }
 
 .hero-group {
-  padding: 10px 20px 10px 45px;
+  padding: 5px 10px 5px 25px;
   overflow: hidden;
   position: absolute;
   display: flex;
@@ -49,8 +49,8 @@ h1 {
 }
 
 .check {
-  width: 33px;
-  height: 33px;
+  width: 19px;
+  height: 19px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 21px;
   align-items: center;
@@ -103,8 +103,8 @@ h1 {
   right: 26%;
 }
 .hero-points {
-  width: 14px;
-  height: 8px;
+  width: 8px;
+  height: 4px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -113,8 +113,8 @@ h1 {
   left: 5.5%;
 }
 .check-text {
-  line-height: 21px;
-  font-size: 20px;
+  line-height: 14px;
+  font-size: 11px;
   color: rgba(2 10 25, 1);
 }
 
@@ -128,6 +128,32 @@ h1 {
 
 .check3-color {
   color: #bcdcbe;
+}
+@media (min-width: 768px) {
+  .check-text {
+    font-size: 21px;
+    line-height: 21px;
+  }
+
+  .check {
+    width: 33px;
+    height: 33px;
+  }
+
+  .hero-points {
+    width: 14px;
+    height: 8px;
+  }
+
+  .hero-group {
+    padding: 10px 20px 10px 45px;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    border-radius: 21px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 1280px) {

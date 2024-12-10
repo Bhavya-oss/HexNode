@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -90,7 +94,20 @@ a {
   margin-top: 20px;
 }
 
+/* color start */
+.color-primary {
+  color: white;
+}
+
+.color-secondary {
+  color: #020a19;
+}
+/* color end */
 /* opacity start*/
+.opacity-0 {
+  opacity: 0;
+}
+
 .opacity-75 {
   opacity: 0.75;
 }
@@ -122,6 +139,10 @@ a {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .flex-row {
@@ -267,6 +288,10 @@ p {
   margin-left: 0;
   margin-right: 0;
 }
+
+.ml-30 {
+  margin-left: 30px;
+}
 /* margin end*/
 img {
   max-width: 100%;
@@ -353,6 +378,10 @@ button:hover {
   z-index: 10;
 }
 
+.z-102 {
+  z-index: 102;
+}
+
 /* padding start */
 .px-20 {
   padding-left: 20px;
@@ -431,6 +460,10 @@ button:hover {
   margin-top: 15px;
 }
 /* margin end */
+
+.scroll-behaviour {
+  scroll-behavior: smooth;
+}
 
 @media screen and (max-width: 767) {
   .hidden-sm {
@@ -696,6 +729,10 @@ button:hover {
   .max-w-105 {
     max-width: 105px;
   }
+
+  .w-xl-420 {
+    width: 420px;
+  }
   .justify-between-xl {
     justify-content: space-between;
   }
@@ -737,6 +774,10 @@ button:hover {
 
   .text-left-xl {
     text-align: left;
+  }
+
+  .opacity-xl-100 {
+    opacity: 1;
   }
 }
 

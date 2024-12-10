@@ -37,9 +37,7 @@ export default function Hero() {
                   </div>
                   <div className="w-100 max-w-325 mt-15 mt-sm-0 max-w-sm-210">
                     {" "}
-                    <button role="button" className="h-53 w-100">
-                      let's try it out
-                    </button>
+                    <button className="h-53 w-100">let's try it out</button>
                   </div>
                 </div>
               </form>

@@ -49,6 +49,7 @@ function EndPoints() {
   return (
     <>
       <section
+        id="features"
         aria-label="Powerful endpoint management"
         className="relative py-60 py-lg-80"
       >

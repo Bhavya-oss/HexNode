@@ -7,7 +7,7 @@
 .carousel-track {
   display: flex;
   gap: 20px; /* Adjust spacing between items */
-  animation: scroll 40s linear infinite; /* Increased time for smooth stop between moves */
+  animation: scroll 20s linear infinite;
 }
 
 .carousel-item {
@@ -20,29 +20,12 @@
   height: auto;
 }
 
-/* Keyframes for scrolling with pause */
+/* Keyframes for scrolling */
 @keyframes scroll {
-  0%,
-  10% {
+  0% {
     transform: translateX(0);
   }
-  20%,
-  30% {
-    transform: translateX(-130px);
-  }
-  40%,
-  50% {
-    transform: translateX(-260px);
-  }
-  60%,
-  70% {
-    transform: translateX(-390px);
-  }
-  80%,
-  90% {
-    transform: translateX(-520px);
-  }
   100% {
-    transform: translateX(-650px);
+    transform: translateX(-100%);
   }
 }

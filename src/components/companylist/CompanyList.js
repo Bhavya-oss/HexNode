@@ -33,6 +33,7 @@ function CompanyList() {
                   <a
                     className="max-w-340 max-w-md-27 flex-w flex-w-md px-0 py-40 py-md-0 px-md-10 px-xl-45 px-lg-25  "
                     target="_blank"
+                    rel="noreferrer"
                     href="https://www.hexnode.com/blogs/mitsogo-hexnode-named-a-leader-in-idc-marketscape-worldwide-uem-software-for-apple-devices-2024-vendor-assessment/"
                   >
                     <div

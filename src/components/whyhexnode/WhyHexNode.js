@@ -73,7 +73,10 @@ function WhyHexNode() {
   ];
   return (
     <>
-      <section className="why-hexnode-bg relative py-60 py-lg-80">
+      <section
+        id="why-hexnode"
+        className="why-hexnode-bg relative py-60 py-lg-80"
+      >
         <div className="w-88 mx-auto max-w-1300">
           <h2 className="text-center pb-10">Why Hexnode?</h2>
           <div className="flex flex-wrap justify-center align-item-flex-start justify-between-md relative ">

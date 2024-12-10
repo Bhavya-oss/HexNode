@@ -11,7 +11,7 @@ function Main() {
   return (
     <div>
       <NavBar />
-      <main>
+      <main className="scroll-behaviour">
         {" "}
         <Hero />
         <CompanyList />

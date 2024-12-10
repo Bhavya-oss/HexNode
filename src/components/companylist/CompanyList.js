@@ -25,31 +25,37 @@ function CompanyList() {
     <React.Fragment>
       <div className="py-30 companylist-bg">
         <div className="w-88 mx-auto max-w-1300">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-column flex-row-md  max-md-align-center justify-center mx-0 justify-between-md mx-md-10 mx-lg-25 mx-xl-45">
             {COMPANY_LIST_DATA.map((data) => {
               return (
                 <>
                   {" "}
                   <a
-                    className="px-xl-45 px-lg-25 py-md-0 max-w-md-27"
+                    className="max-w-340 max-w-md-27 flex-w flex-w-md px-0 py-40 py-md-0 px-md-10 px-xl-45 px-lg-25  "
                     target="_blank"
                     href="https://www.hexnode.com/blogs/mitsogo-hexnode-named-a-leader-in-idc-marketscape-worldwide-uem-software-for-apple-devices-2024-vendor-assessment/"
                   >
                     <div
                       className="flex
-             flex-column align-item-center transform-company gap-15 align-item-baseline-md"
+             flex-column align-item-center  transform-company align-item-baseline-md"
                     >
-                      <div className="flex align-item-center w-100 h-100 max-h-25 max-w-156">
-                        <img
-                          src={data.img}
-                          alt="IDC"
-                          decoding="async"
-                          loading="lazy"
-                          width={data.width}
-                          height={25}
-                        />
+                      <div className="flex mb-15">
+                        {" "}
+                        <div className="flex align-item-center min-w-82 w-100 h-100 max-h-25 max-w-156">
+                          <img
+                            src={data.img}
+                            alt="IDC"
+                            decoding="async"
+                            loading="lazy"
+                            width={data.width}
+                            height={25}
+                            className="w-100 max-w-100 h-25 object-cover"
+                          />
+                        </div>
                       </div>
-                      <p className="companylist-p">{data.text}</p>
+                      <p className="companylist-p text-center text-left-md">
+                        {data.text}
+                      </p>
                     </div>
                   </a>
                   <div className="vertical-divider"></div>

@@ -48,7 +48,10 @@ function EndPoints() {
   ];
   return (
     <>
-      <section className="relative py-60 py-lg-80">
+      <section
+        aria-label="Powerful endpoint management"
+        className="relative py-60 py-lg-80"
+      >
         <div className="w-88 mx-auto max-w-1300">
           <h2 className="text-center mx-auto pb-40 max-w-800">
             Powerful endpoint management, built for the devices you choose

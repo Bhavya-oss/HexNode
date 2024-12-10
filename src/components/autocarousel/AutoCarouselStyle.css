@@ -1,0 +1,48 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px; /* Adjust spacing between items */
+  animation: scroll 40s linear infinite; /* Increased time for smooth stop between moves */
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 130px; /* Adjust logo width */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Keyframes for scrolling with pause */
+@keyframes scroll {
+  0%,
+  10% {
+    transform: translateX(0);
+  }
+  20%,
+  30% {
+    transform: translateX(-130px);
+  }
+  40%,
+  50% {
+    transform: translateX(-260px);
+  }
+  60%,
+  70% {
+    transform: translateX(-390px);
+  }
+  80%,
+  90% {
+    transform: translateX(-520px);
+  }
+  100% {
+    transform: translateX(-650px);
+  }
+}

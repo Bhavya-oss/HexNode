@@ -106,7 +106,7 @@ function WhyHexNode() {
                 </>
               );
             })}
-            <div className="whyHexnode_hexnodeAnimation_move why-hexnode-middle hidden-sm hidden-md block-xl">
+            <div className="whyHexnode_hexnodeAnimation_move why-hexnode-middle hidden hidden-sm hidden-md block-xl">
               <div className="z-10 relative max-w-85 max-w-105 ">
                 <img
                   alt="Hexnode App Icon"

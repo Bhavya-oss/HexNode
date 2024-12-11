@@ -41,6 +41,9 @@ a {
 .max-w-100 {
   max-width: 100%;
 }
+.max-w-1000 {
+  max-width: 1000px;
+}
 .max-w-1300 {
   max-width: 1300px;
 }
@@ -183,6 +186,10 @@ a {
 
 .order-1 {
   order: 1;
+}
+
+.order-3 {
+  order: 3;
 }
 
 .flex-w {
@@ -437,6 +444,11 @@ button:hover {
   padding-bottom: 40px;
 }
 
+.py {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .py-60 {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -458,6 +470,10 @@ button:hover {
 
 .mt-15 {
   margin-top: 15px;
+}
+
+.m-0-0-20 {
+  margin: 0 0 20px;
 }
 /* margin end */
 
@@ -500,6 +516,22 @@ button:hover {
   }
   .max-w-sm-210 {
     max-width: 210px;
+  }
+
+  .flex-row-sm {
+    flex-direction: row;
+  }
+
+  .justify-between-sm {
+    justify-content: space-between;
+  }
+
+  .m-sm-0 {
+    margin: 0;
+  }
+
+  .order-sm-2 {
+    order: 2;
   }
 }
 
@@ -554,6 +586,9 @@ button:hover {
     display: none;
   }
 
+  .h-md-330 {
+    height: 330px;
+  }
   .min-h-md-135 {
     min-height: 135px;
   }
@@ -564,6 +599,10 @@ button:hover {
 
   .max-w-md-27 {
     max-width: 27%;
+  }
+
+  .max-w-md-302 {
+    max-width: 302px;
   }
   .max-w-md-320 {
     max-width: 320px;
@@ -728,6 +767,10 @@ button:hover {
   }
   .max-w-105 {
     max-width: 105px;
+  }
+
+  .ml-xl-12 {
+    margin-left: 12px;
   }
 
   .w-xl-420 {

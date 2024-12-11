@@ -1,5 +1,6 @@
 import React from "react";
 import "./HeroStyle.css";
+import EmailValidation from "./EmailValidation";
 export default function Hero() {
   return (
     <>
@@ -23,24 +24,7 @@ export default function Hero() {
                   Hexnode works on the details.
                 </p>
               </div>
-              <form data-hs-cf-bound="true" style={{ padding: 0, margin: 0 }}>
-                <div className="flex  justify-between flex-column align-item-center flex-row-md justify-start-xl">
-                  <div className="w-100 max-w-325 mr-sm-8 ">
-                    {" "}
-                    <input
-                      type="text"
-                      placeholder="Email"
-                      name="email"
-                      id="signup-email"
-                      className="w-100"
-                    />
-                  </div>
-                  <div className="w-100 max-w-325 mt-15 mt-sm-0 max-w-sm-210">
-                    {" "}
-                    <button className="h-53 w-100">let's try it out</button>
-                  </div>
-                </div>
-              </form>
+              <EmailValidation />
               <div style={{ paddingTop: "15px" }}></div>
               {/* </div> */}
             </div>

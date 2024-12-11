@@ -7,7 +7,6 @@ function NavBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check the scroll position
       if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
@@ -24,8 +23,8 @@ function NavBar() {
   }, []);
   return (
     <header
-      onMouseEnter={() => setIsHovered(true)} // Hover in
-      onMouseLeave={() => setIsHovered(false)} // Hover out
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className={`w-full z-102 nav-header header-wrap ${
         isScrolled ? "nav-header-border" : ""
       }`}
@@ -37,7 +36,7 @@ function NavBar() {
     >
       <div className="relative">
         <div className="w-88 mx-auto max-w-md-1300 ">
-          <nav className="flex align-item-center justify-between navbar">
+          <nav className="flex align-item-center justify-between w-100">
             <a href="https://www.hexnode.com/" className="nav-logo relative  ">
               <svg
                 class={`fill-white w-121 nav-fill-svg ${
@@ -55,45 +54,58 @@ function NavBar() {
                 />
               </svg>
             </a>
-            <div className="w-100 flex justify-start align-item-center  ml-30 justify-between-xl opacity-xl-100 nav-bar_mob-nav-sidebar-inner__8BhrY">
+            <div
+              className={`${
+                clicked ? "navbar active" : "navbar"
+              } w-100 flex flex-column justify-start flex-row-xl align-item-center ml-xl-12 justify-between-xl opacity-xl-100 `}
+            >
               <ul className="navbar-items">
                 {" "}
                 <li
-                  className={
-                    isScrolled || isHovered
+                  className={`${
+                    isScrolled || isHovered || clicked
                       ? "color-secondary"
                       : "color-primary"
-                  }
+                  } li-width-100`}
                 >
                   {" "}
-                  <a href="#why-hexnode">Why HexNode</a>
+                  <a
+                    className={`${
+                      isScrolled || isHovered || clicked
+                        ? "color-secondary"
+                        : "color-primary"
+                    } li-width-100`}
+                    href="#why-hexnode"
+                  >
+                    Why HexNode
+                  </a>
                 </li>
                 <li
-                  className={
-                    isScrolled || isHovered
+                  className={`${
+                    isScrolled || isHovered || clicked
                       ? "color-secondary"
                       : "color-primary"
-                  }
+                  } li-width-100`}
                 >
                   {" "}
                   <a href="#features">Features </a>
                 </li>
                 <li
-                  className={
-                    isScrolled || isHovered
+                  className={`${
+                    isScrolled || isHovered || clicked
                       ? "color-secondary"
                       : "color-primary"
-                  }
+                  } li-width-100`}
                 >
                   {" "}
-                  <a href="">Platforms </a>
+                  <a href="#platform">Platforms </a>
                 </li>
                 <li
-                  className={
-                    isScrolled || isHovered
+                  className={`${
+                    isScrolled || isHovered || clicked
                       ? "color-secondary"
                       : "color-primary"
-                  }
+                  } li-width-100`}
                 >
                   {" "}
                   <a href="#customers">Customers </a>
@@ -103,14 +115,15 @@ function NavBar() {
                 {" "}
                 <button>14 day free trail</button>
               </div>
-              <div className="mobile">
-                <i
-                  onClick={() => setClicked(!clicked)}
-                  className={`${
-                    clicked ? "fas fa-bars" : "fas fa-times"
-                  } ham-close `}
-                ></i>
-              </div>
+            </div>
+            <div className="mobile">
+              <i
+                style={{ fontSize: "30px" }}
+                onClick={() => setClicked(!clicked)}
+                className={`${
+                  clicked ? "fas fa-bars" : "fas fa-times"
+                } ham-close `}
+              ></i>
             </div>
           </nav>
         </div>

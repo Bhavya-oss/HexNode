@@ -31,6 +31,30 @@ h1 {
   margin-bottom: 20px;
 }
 
+.message {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+.reveal-text {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-text.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.after-text {
+  height: 24px; /* Ensures space is reserved for the message */
+  overflow: hidden;
+}
 .max-w-554 {
   max-width: 554px;
 }

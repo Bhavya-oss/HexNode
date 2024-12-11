@@ -1,40 +1,42 @@
 import React, { useState } from "react";
+import "./HeroStyle.css"; // Assuming you use a separate CSS file for styling
 
 function EmailValidation() {
   const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [message, setMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
 
-  // Step 2: Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Reset errors before validation
-    setEmailError("");
-
-    // Step 3: Validate email
-    if (!email) {
-      setEmailError("Email is required.");
-    } else if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email.");
-    } else {
-      setIsSubmitted(true);
-      // Do the actual form submission here (API call, etc.)
-      console.log("Form Submitted with email:", email);
-    }
+  const handleChange = (e) => {
+    setEmail(e.target.value);
   };
 
-  // Step 4: Email validation function
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+  const regEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowMessage(false);
+
+    // Validation logic
+    if (email === "") {
+      setMessage("Please enter your work email!");
+    } else if (!regEx.test(email)) {
+      setMessage("Email is not Valid");
+    } else {
+      setMessage("Successfully submitted");
+      setEmail("");
+    }
+
+    setShowMessage(true); // Trigger the animation
+
+    // Remove the message after 4 seconds
+    setTimeout(() => {
+      setMessage("");
+      setShowMessage(false);
+    }, 4000);
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      data-hs-cf-bound="true"
-      style={{ padding: 0, margin: 0 }}
-    >
+    <form onSubmit={handleSubmit} style={{ padding: 0, margin: 0 }}>
       <div className="flex justify-between flex-column align-item-center flex-row-md justify-start-xl">
         <div className="w-100 max-w-325 mr-sm-8">
           <input
@@ -44,21 +46,24 @@ function EmailValidation() {
             id="signup-email"
             className="w-100"
             value={email}
-            onChange={(e) => setEmail(e.target.value)} // Handle input changes
+            onChange={handleChange}
           />
-          {/* Step 5: Display error message if there's an email error */}
-          {emailError && <div className="error">{emailError}</div>}
         </div>
         <div className="w-100 max-w-325 mt-15 mt-sm-0 max-w-sm-210">
-          <button className="h-53 w-100" type="submit">
+          <button type="submit" className="h-53 w-100">
             Let's try it out
           </button>
         </div>
       </div>
-      {/* Step 6: Show success message after form submission */}
-      {isSubmitted && (
-        <div className="success">Form submitted successfully!</div>
-      )}
+      <div className="relative after-text">
+        <span
+          className={`text-center message reveal-text ${
+            showMessage ? "show" : ""
+          }`}
+        >
+          {message}
+        </span>
+      </div>
     </form>
   );
 }

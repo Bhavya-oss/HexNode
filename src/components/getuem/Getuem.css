@@ -1,0 +1,16 @@
+.getuem-bg {
+  background-color: #020a19;
+}
+
+.getuem-text {
+  font-size: 30px;
+  color: #fff;
+  line-height: 38px;
+}
+
+@media (min-width: 768px) {
+  .getuem-text {
+    font-size: 42px;
+    line-height: 1.3;
+  }
+}

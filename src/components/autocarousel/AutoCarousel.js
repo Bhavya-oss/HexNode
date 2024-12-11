@@ -14,10 +14,7 @@ function AutoCarousel() {
     "https://static.hexnode.com/v2/assets/img/logos/dark-logo/hilton.svg",
   ];
   return (
-    <section
-      className="pt-20 pb-60 pb-lg-80 pt-lg-30 "
-      style={{ paddingBottom: "6000px" }}
-    >
+    <section className="pt-20 pb-60 pb-lg-80 pt-lg-30 ">
       <div className="w-88 mx-auto relative max-w-md-1300">
         <div className="flex align align-item-center overflow-hidden">
           <div className="carousel">

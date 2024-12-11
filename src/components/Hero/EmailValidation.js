@@ -55,7 +55,7 @@ function EmailValidation() {
           </button>
         </div>
       </div>
-      <div className="relative after-text">
+      <div className="relative after-text text-center">
         <span
           className={`text-center message reveal-text ${
             showMessage ? "show" : ""

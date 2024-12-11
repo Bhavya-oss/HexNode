@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 function Footer() {
   return (
-    <footer className="footer-bg" style={{ paddingBottom: "500px" }}>
+    <footer className="footer-bg">
       <nav>
         <div className="w-88 mx-auto max-w-md-1300  ">
           <div className="flex flex-column flex-wrap w-100 flex-row-sm align-item-center justify-center justify-between-sm">

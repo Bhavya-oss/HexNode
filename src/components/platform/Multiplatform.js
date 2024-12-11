@@ -63,10 +63,11 @@ function Multiplatform() {
         </p>
         <div className="flex flex-column flex-row-sm align-item-flex-start justify-between  pt-md-50">
           <div
-            className="flex-shrink w-md-46 max-w-md-600 h-100 max-h-565 relative overflow-hidden"
-            style={{ position: "sticky", top: "66px" }}
+            className="flex-shrink w-md-46 max-w-md-600 w-xs-100 h-100 max-h-565 relative overflow-hidden"
+            style={{}}
           >
             <div
+              className="mx-xs-9"
               style={{
                 width: "100%",
                 paddingRight: "24px",
@@ -99,6 +100,9 @@ function Multiplatform() {
                   }}
                 >
                   <img
+                    loading="lazy"
+                    decoding="async"
+                    className="platform-img"
                     src={platform.img}
                     alt={platform.title}
                     style={{
@@ -112,7 +116,7 @@ function Multiplatform() {
             </div>
           </div>
 
-          <div className="min-h-375 w-54 max-w-700 flex-shrink w-100 relative pl-40">
+          <div className="min-h-375 w-54 max-w-700 flex-shrink  relative pl-sm-40 w-xs-100">
             {/* <div className=""> */} {/* <div style={{ width: "50%" }}> */}
             {platformData.map((platform, index) => (
               <div

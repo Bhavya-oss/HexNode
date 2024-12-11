@@ -34,7 +34,7 @@ function NavBar() {
         backgroundColor: isScrolled ? "white" : "#020a19",
       }}
     >
-      <div className="relative pt-xl-1">
+      <div className="relative pt-xl-1 pt-1">
         <div className="w-88 mx-auto max-w-md-1300 ">
           <nav className="flex align-item-center justify-between w-100">
             <a href="https://www.hexnode.com/" className="nav-logo relative  ">
@@ -57,8 +57,27 @@ function NavBar() {
             <div
               className={`${
                 clicked ? "navbar active" : "navbar"
-              } w-100 flex flex-column justify-start flex-row-xl align-item-center ml-xl-12 justify-between-xl opacity-xl-100 `}
+              } w-100 w-75 flex flex-column justify-start flex-row-xl align-item-center ml-xl-12 justify-between-xl opacity-xl-100 `}
             >
+              <div className="hidden-xl w-100">
+                <div
+                  className="w-100 flex align-item-flex-end justify-end"
+                  style={{
+                    // width: "100%",
+
+                    padding: "20px 20px 20px",
+                    borderBottom: "1px solid #dbd9d2 ",
+                  }}
+                >
+                  <i
+                    style={{ fontSize: "30px" }}
+                    onClick={() => setClicked(!clicked)}
+                    className={`${
+                      clicked ? "fas fa-times" : "fas fa-bars"
+                    } ham-close `}
+                  ></i>
+                </div>
+              </div>
               <ul className="navbar-items">
                 {" "}
                 <li
@@ -115,13 +134,19 @@ function NavBar() {
                 {" "}
                 <button>14 day free trail</button>
               </div>
+              <div className="flex align-item-center">
+                <p className="hidden-xl text-center">Login</p>
+              </div>
             </div>
             <div className="mobile">
               <i
-                style={{ fontSize: "30px" }}
+                style={{
+                  fontSize: "30px",
+                  color: isScrolled ? "black" : "white",
+                }}
                 onClick={() => setClicked(!clicked)}
                 className={`${
-                  clicked ? "fas fa-bars" : "fas fa-times"
+                  clicked ? "fas fa-times" : "fas fa-bars"
                 } ham-close `}
               ></i>
             </div>

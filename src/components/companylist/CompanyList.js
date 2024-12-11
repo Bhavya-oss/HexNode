@@ -19,6 +19,7 @@ function CompanyList() {
       width: "156",
     },
   ];
+
   //   console.log("COMPANY_LIST_DATACOMPANY_LIST_DATA0", COMPANY_LIST_DATA);
 
   return (

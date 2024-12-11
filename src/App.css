@@ -27,6 +27,14 @@ a {
   width: 121px;
 }
 
+.w-50 {
+  width: 50%;
+}
+
+.w-54 {
+  width: 54%;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -40,6 +48,10 @@ a {
 
 .max-w-100 {
   max-width: 100%;
+}
+
+.max-w-700 {
+  max-width: 700px;
 }
 .max-w-1000 {
   max-width: 1000px;
@@ -95,6 +107,11 @@ a {
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mx-30 {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 /* color start */
@@ -156,6 +173,9 @@ a {
   flex-direction: column;
 }
 
+.flex-shrink {
+  flex-shrink: 0;
+}
 .grow {
   flex-grow: 1;
 }
@@ -209,6 +229,12 @@ a {
 /* gap end */
 
 /* height start */
+.h-0 {
+  height: 0;
+}
+.h-172 {
+  height: 172px;
+}
 .h-25 {
   height: 25px;
 }
@@ -234,6 +260,14 @@ a {
 
 .max-h-400 {
   max-height: 400px;
+}
+
+.max-h-565 {
+  max-height: 565px;
+}
+
+.min-h-375 {
+  min-height: 375px;
 }
 /* height end */
 h1 {
@@ -395,6 +429,14 @@ button:hover {
   padding-right: 20px;
 }
 
+.px-30 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.pl-40 {
+  padding-left: 40px;
+}
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -426,13 +468,20 @@ button:hover {
 .pt-20 {
   padding-top: 20px;
 }
-
+.pt-30 {
+  padding-top: 30px;
+}
 .pt-40 {
   padding-top: 40px;
 }
 
 .pt-60 {
   padding-top: 60px;
+}
+
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .py-30 {
   padding-top: 30px;
@@ -533,6 +582,19 @@ button:hover {
   .order-sm-2 {
     order: 2;
   }
+
+  .w-sm-88 {
+    width: 88%;
+  }
+
+  .max-w-sm-1300 {
+    max-width: 1300px;
+  }
+
+  .mx-sm-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -593,6 +655,10 @@ button:hover {
     min-height: 135px;
   }
 
+  .w-md-46 {
+    width: 46%;
+  }
+
   .max-h-md-135 {
     max-height: 135px;
   }
@@ -616,6 +682,9 @@ button:hover {
     max-width: 554px;
   }
 
+  .max-w-md-600 {
+    max-width: 600px;
+  }
   .max-w-md-610 {
     max-width: 610px;
   }
@@ -665,6 +734,10 @@ button:hover {
     padding-top: 40px;
   }
 
+  .pt-md-50 {
+    padding-top: 50px;
+  }
+
   .mt-md-40 {
     margin-top: 40px;
   }
@@ -678,6 +751,10 @@ button:hover {
 
   .flex-row-md {
     flex-direction: row;
+  }
+
+  .block-md {
+    display: block;
   }
 }
 
@@ -759,6 +836,14 @@ button:hover {
   .px-xl-45 {
     padding-left: 45px;
     padding-right: 45px;
+  }
+
+  .pt-xl-7 {
+    padding-top: 7px;
+  }
+
+  .pt-xl-1 {
+    padding-top: 0px;
   }
 
   .mx-xl-45 {

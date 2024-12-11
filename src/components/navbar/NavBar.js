@@ -34,7 +34,7 @@ function NavBar() {
         backgroundColor: isScrolled ? "white" : "#020a19",
       }}
     >
-      <div className="relative">
+      <div className="relative pt-xl-1">
         <div className="w-88 mx-auto max-w-md-1300 ">
           <nav className="flex align-item-center justify-between w-100">
             <a href="https://www.hexnode.com/" className="nav-logo relative  ">

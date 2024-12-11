@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./MultiplatformStyle.css";
 function Multiplatform() {
   const [selectedPlatform, setSelectedPlatform] = useState(0);
 
@@ -52,91 +52,110 @@ function Multiplatform() {
   };
 
   return (
-    <section id="platform">
-      <div
-        className="container"
-        style={{ fontFamily: "Arial, sans-serif", padding: "20px" }}
-      >
-        <h2
-          style={{ fontSize: "24px", fontWeight: "bold", marginBottom: "16px" }}
-        >
+    <section id="platform" className="platform-bg py-60 relative py-lg-80 ">
+      <div className="w-sm-88 max-w-sm-1300 mx-sm-auto">
+        <h2 className="text-center mx-auto pb-20 ">
           Multi-platform Endpoint Management
         </h2>
-        <p style={{ marginBottom: "24px" }}>
+        <p className="hidden block-md text-center">
           Devices of varying platforms? Hexnode thrives in a diverse
           environment.
         </p>
-        <div style={{ display: "flex" }}>
+        <div className="flex flex-column flex-row-sm align-item-flex-start justify-between  pt-md-50">
           <div
-            style={{
-              width: "50%",
-              paddingRight: "24px",
-              position: "relative",
-              height: "400px",
-            }}
+            className="flex-shrink w-md-46 max-w-md-600 h-100 max-h-565 relative overflow-hidden"
+            style={{ position: "sticky", top: "66px" }}
           >
-            {platformData.map((platform, index) => (
-              <div
-                key={index}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  transition: "all 0.5s",
-                  transform:
-                    selectedPlatform === index
-                      ? "translateY(0)"
-                      : "translateY(100%)",
-                  opacity: selectedPlatform === index ? 1 : 0,
-                  zIndex: selectedPlatform === index ? 1 : 0,
-                }}
-              >
-                <img
-                  src={platform.img}
-                  alt={platform.title}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
-            ))}
+            <div
+              style={{
+                width: "100%",
+                paddingRight: "24px",
+                position: "relative",
+                backgroundColor: "#f7f7f7",
+                overflow: "hidden", // Ensures hidden overflow for smooth animation
+                height: "565px", // Set a fixed height for the container
+                position: "sticky",
+                top: "66px",
+              }}
+            >
+              {platformData.map((platform, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    transition: "transform 0.5s ease, opacity 0.5s ease",
+                    transform:
+                      selectedPlatform === index
+                        ? "translateY(0)" // Current image in view
+                        : selectedPlatform > index
+                        ? "translateY(-100%)" // Outgoing image slides up
+                        : "translateY(100%)", // Incoming image slides in from below
+                    opacity: selectedPlatform === index ? 1 : 0,
+                    zIndex: selectedPlatform === index ? 1 : 0, // Ensure active image is on top
+                  }}
+                >
+                  <img
+                    src={platform.img}
+                    alt={platform.title}
+                    style={{
+                      width: "100%", // Makes the image responsive
+                      height: "auto", // Ensures it fills the container
+                      objectFit: "cover", // Maintains aspect ratio while filling the area
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-          <div style={{ width: "50%" }}>
+
+          <div className="min-h-375 w-54 max-w-700 flex-shrink w-100 relative pl-40">
+            {/* <div className=""> */} {/* <div style={{ width: "50%" }}> */}
             {platformData.map((platform, index) => (
               <div
+                className={`relative ${
+                  selectedPlatform === index
+                    ? "platform-border px-30"
+                    : "platform-border-bottom mx-30"
+                }`}
                 key={index}
                 style={{
-                  borderBottom: "1px solid #ddd",
-                  padding: "16px",
-                  cursor: "pointer",
                   backgroundColor:
                     selectedPlatform === index ? "#f9f9f9" : "transparent",
+                  borderRadius: selectedPlatform === index ? "15px" : "0",
                 }}
                 onClick={() => handlePlatformClick(index)}
               >
                 <h3
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    marginBottom: "8px",
-                  }}
+                  className={`platform-heading text-left ${
+                    selectedPlatform === index ? "pt-30" : "py-20"
+                  }`}
                 >
                   {platform.title}
                 </h3>
                 {selectedPlatform === index && (
-                  <div>
-                    <p style={{ marginBottom: "8px" }}>
-                      {platform.description}
-                    </p>
-                    {platform.urlP && (
-                      <a href="#" style={{ color: "#e74c3c" }}>
-                        {platform.urlP}
-                      </a>
-                    )}
+                  <div
+                    className={`relative platform-content ${
+                      selectedPlatform === index ? "h-172" : "h-0"
+                    }`}
+                  >
+                    <div className="pb-30">
+                      <p className="platform-text">{platform.description}</p>
+                      {platform.urlP && (
+                        <a href="#" className="platform-check">
+                          {platform.urlP}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
             ))}
+            {/* </div> */}
+            {/* </div> */}
           </div>
         </div>
       </div>

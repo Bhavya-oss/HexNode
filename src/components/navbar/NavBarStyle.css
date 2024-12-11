@@ -15,7 +15,7 @@
   text-decoration: none;
   /* color: #020a19; */
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 21px;
   transform: color 0.2s ease-out;
 }
@@ -212,8 +212,8 @@ nav {
     flex-direction: column;
     margin-left: 0;
     position: fixed;
-    top: 600px;
-    right: 0px;
+    top: 0px;
+    right: -660px;
     height: 100vh;
     background-color: #ffffff;
   }

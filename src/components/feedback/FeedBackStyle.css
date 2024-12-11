@@ -1,3 +1,35 @@
+.feedback-bordertop {
+  border-top: 1px solid #ffffff4d;
+}
+
+.feedback-author {
+  font-size: 14px;
+  line-height: 11px;
+  color: #020a19;
+  font-weight: 700;
+}
+
+.feedback-sub-title {
+  font-size: 12px;
+  line-height: 16px;
+  color: 020a19;
+  font-weight: 400;
+}
+
+.move-button:hover {
+}
+
+@media (min-width: 640px) {
+  .feedback-author {
+    font-size: 20px;
+    line-height: 33px;
+  }
+
+  .feedback-sub-title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
 .slick-slider {
   position: relative;
   display: block;
@@ -36,7 +68,9 @@
   background-color: #f7f7f7;
   cursor: pointer;
 }
-
+.button-carousel:hover {
+  background-color: #f7f7f7;
+}
 .button-left {
   bottom: -80px;
   left: 50%;

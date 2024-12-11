@@ -79,6 +79,9 @@ a {
   max-width: 280px;
 }
 
+.max-w-320 {
+  max-width: 320px;
+}
 .max-w-325 {
   max-width: 325px;
 }
@@ -273,6 +276,9 @@ a {
   max-height: 565px;
 }
 
+.min-h-73 {
+  min-height: 73px;
+}
 .min-h-375 {
   min-height: 375px;
 }
@@ -447,6 +453,10 @@ button:hover {
 .pb-0 {
   padding-bottom: 0px;
 }
+
+.pb-5 {
+  padding-bottom: 5px;
+}
 .pb-10 {
   padding-bottom: 10px;
 }
@@ -498,6 +508,10 @@ button:hover {
   padding-bottom: 30px;
 }
 
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 .py-40 {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -615,6 +629,10 @@ button:hover {
   .pl-sm-40 {
     padding-left: 40px;
   }
+
+  .pb-sm-0 {
+    padding-bottom: 0px;
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -670,6 +688,10 @@ button:hover {
 
   .h-md-330 {
     height: 330px;
+  }
+
+  .min-h-md-120 {
+    min-height: 120px;
   }
   .min-h-md-135 {
     min-height: 135px;
@@ -759,6 +781,10 @@ button:hover {
 
   .pt-md-50 {
     padding-top: 50px;
+  }
+
+  .mt-md-0 {
+    margin-top: 0px;
   }
 
   .mt-md-40 {

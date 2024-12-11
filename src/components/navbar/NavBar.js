@@ -134,9 +134,9 @@ function NavBar() {
                 {" "}
                 <button>14 day free trail</button>
               </div>
-              <div className="flex align-item-center">
+              {/* <div className="flex align-item-center">
                 <p className="hidden-xl text-center">Login</p>
-              </div>
+              </div> */}
             </div>
             <div className="mobile">
               <i

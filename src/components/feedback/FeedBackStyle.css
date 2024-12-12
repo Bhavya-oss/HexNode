@@ -12,11 +12,8 @@
 .feedback-sub-title {
   font-size: 12px;
   line-height: 16px;
-  color: 020a19;
+  color: #020a19;
   font-weight: 400;
-}
-
-.move-button:hover {
 }
 
 @media (min-width: 640px) {
@@ -72,13 +69,13 @@
   background-color: #f7f7f7;
 }
 .button-left {
-  bottom: -80px;
+  bottom: 32px;
   left: 50%;
   transform: translate(-62px, 50%);
 }
 
 .button-right {
-  bottom: -80px;
+  bottom: 32px;
   left: 50%;
   transform: translate(8px, 50%);
 }
@@ -87,6 +84,10 @@
   opacity: 1;
 }
 
+#customers img {
+  width: auto;
+  height: 100%;
+}
 @media (min-width: 768px) {
 }
 
@@ -100,7 +101,7 @@
   .button-right {
     bottom: 50%;
     right: -60px;
-    transform: translate(50%, 50%);
+    transform: translate(781%, 50%);
   }
 }
 

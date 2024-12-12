@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import NavBar from "./components/navbar/NavBar";
 import Hero from "./components/Hero/Hero";
 import CompanyList from "./components/companylist/CompanyList";
@@ -11,12 +11,36 @@ import Footer from "./components/footer/Footer";
 import Multiplatform from "./components/platform/Multiplatform";
 
 function Main() {
+  const [isVisible, setIsVisible] = useState(false);
+  const heroRef = useRef(null); // Reference to the Hero component
+  const navbarRef = useRef(null); // Reference to the Navbar component
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroTop = heroRef.current.getBoundingClientRect().top;
+      const navbarHeight = navbarRef.current.offsetHeight;
+
+      if (heroTop <= navbarHeight) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  console.log("isVisibleisVisibleisVisible", isVisible);
   return (
     <div>
-      <NavBar />
+      <NavBar navbarRef={navbarRef} isVisible={isVisible} />
       <main className="scroll-behaviour">
         {" "}
-        <Hero />
+        <Hero heroRef={heroRef} />
         <CompanyList />
         <WhyHexNode />
         <EndPoints />

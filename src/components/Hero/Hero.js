@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroStyle.css";
 import EmailValidation from "./EmailValidation";
-export default function Hero() {
+export default function Hero({ heroRef }) {
   return (
     <>
       <section aria-label="Hero" className="w-100 hero-background">
@@ -24,7 +24,7 @@ export default function Hero() {
                   Hexnode works on the details.
                 </p>
               </div>
-              <EmailValidation />
+              <EmailValidation heroRef={heroRef} />
               <div style={{ paddingTop: "15px" }}></div>
               {/* </div> */}
             </div>

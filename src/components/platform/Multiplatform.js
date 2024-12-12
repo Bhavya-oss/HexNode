@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MultiplatformStyle.css";
+
 function Multiplatform() {
   const [selectedPlatform, setSelectedPlatform] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const platformData = [
     {
@@ -47,85 +49,103 @@ function Multiplatform() {
       urlP: "Try Hexnode on your endpoints",
     },
   ];
+
+  // Check screen size on mount and resize
+  useEffect(() => {
+    const checkMobileView = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on mount
+    checkMobileView();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobileView);
+
+    // Cleanup listener
+    return () => window.removeEventListener("resize", checkMobileView);
+  }, []);
+
   const handlePlatformClick = (index) => {
     setSelectedPlatform(index);
   };
-
   return (
-    <section id="platform" className="platform-bg py-60 relative py-lg-80 ">
+    <section id="platform" className="platform-bg py-60 relative py-lg-80">
       <div className="w-sm-88 max-w-sm-1300 mx-sm-auto">
-        <h2 className="text-center mx-auto pb-20 ">
+        <h2 className="text-center mx-auto pb-20">
           Multi-platform Endpoint Management
         </h2>
         <p className="hidden block-md text-center">
           Devices of varying platforms? Hexnode thrives in a diverse
           environment.
         </p>
-        <div className="flex flex-column flex-row-sm align-item-flex-start justify-between  pt-md-50">
-          <div
-            className="flex-shrink w-md-46 max-w-md-600 w-xs-100 h-100 max-h-565 relative overflow-hidden"
-            style={{}}
-          >
+        <div className="flex flex-column flex-row-sm align-item-flex-start justify-between pt-md-50">
+          {/* Desktop View - Image on Left */}
+          {!isMobile && (
             <div
-              className="mx-xs-9"
-              style={{
-                width: "100%",
-                paddingRight: "24px",
-                position: "relative",
-                backgroundColor: "#f7f7f7",
-                overflow: "hidden", // Ensures hidden overflow for smooth animation
-                height: "565px", // Set a fixed height for the container
-                position: "sticky",
-                top: "66px",
-              }}
+              className="flex-shrink w-md-46 max-w-md-600 w-xs-100 h-100 max-h-565 relative overflow-hidden"
+              style={{}}
             >
-              {platformData.map((platform, index) => (
-                <div
-                  key={index}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    transition: "transform 0.5s ease, opacity 0.5s ease",
-                    transform:
-                      selectedPlatform === index
-                        ? "translateY(0)" // Current image in view
-                        : selectedPlatform > index
-                        ? "translateY(-100%)" // Outgoing image slides up
-                        : "translateY(100%)", // Incoming image slides in from below
-                    opacity: selectedPlatform === index ? 1 : 0,
-                    zIndex: selectedPlatform === index ? 1 : 0, // Ensure active image is on top
-                  }}
-                >
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    className="platform-img"
-                    src={platform.img}
-                    alt={platform.title}
+              <div
+                className="mx-xs-9"
+                style={{
+                  width: "100%",
+                  paddingRight: "24px",
+                  position: "relative",
+                  backgroundColor: "#f7f7f7",
+                  overflow: "hidden",
+                  height: "565px",
+                  position: "sticky",
+                  top: "66px",
+                }}
+              >
+                {platformData.map((platform, index) => (
+                  <div
+                    key={index}
                     style={{
-                      width: "100%", // Makes the image responsive
-                      height: "auto", // Ensures it fills the container
-                      objectFit: "cover", // Maintains aspect ratio while filling the area
+                      width: "100%",
+                      height: "auto",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      transition: "transform 0.5s ease, opacity 0.5s ease",
+                      transform:
+                        selectedPlatform === index
+                          ? "translateY(0)"
+                          : selectedPlatform > index
+                          ? "translateY(-100%)"
+                          : "translateY(100%)",
+                      opacity: selectedPlatform === index ? 1 : 0,
+                      zIndex: selectedPlatform === index ? 1 : 0,
                     }}
-                  />
-                </div>
-              ))}
+                  >
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      className="platform-img"
+                      src={platform.img}
+                      alt={platform.title}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
-          <div className="min-h-375 w-54 max-w-700 flex-shrink  relative pl-sm-40 w-xs-100">
-            {/* <div className=""> */} {/* <div style={{ width: "50%" }}> */}
+          <div className="min-h-375 w-54 max-w-700 flex-shrink relative pl-sm-40 w-xs-100 w-platform-md-90">
             {platformData.map((platform, index) => (
               <div
+                key={index}
                 className={`relative ${
                   selectedPlatform === index
                     ? "platform-border px-30"
                     : "platform-border-bottom mx-30"
                 }`}
-                key={index}
                 style={{
                   backgroundColor:
                     selectedPlatform === index ? "#f9f9f9" : "transparent",
@@ -133,20 +153,47 @@ function Multiplatform() {
                 }}
                 onClick={() => handlePlatformClick(index)}
               >
-                <h3
-                  className={`platform-heading text-left ${
-                    selectedPlatform === index ? "pt-30" : "py-20"
-                  }`}
-                >
-                  {platform.title}
-                </h3>
-                {selectedPlatform === index && (
-                  <div
-                    className={`relative platform-content ${
-                      selectedPlatform === index ? "h-172" : "h-0"
+                {(!isMobile || selectedPlatform !== index) && (
+                  <h3
+                    className={`platform-heading text-left ${
+                      selectedPlatform === index ? "pt-30" : "py-20"
                     }`}
                   >
+                    {platform.title}
+                  </h3>
+                )}
+
+                {selectedPlatform === index && (
+                  <div className="platform-content relative">
+                    {/* Mobile/Tablet View - Image on Top */}
+                    {isMobile && (
+                      <div className="platform-mobile-image mb-20">
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          className="platform-img w-full"
+                          src={platform.img}
+                          alt={platform.title}
+                          style={{
+                            width: "100%",
+                            height: "auto",
+                            objectFit: "cover",
+                            borderRadius: "10px",
+                          }}
+                        />
+                      </div>
+                    )}
+
                     <div className="pb-30">
+                      {isMobile && (
+                        <h3
+                          className={`platform-heading text-left ${
+                            selectedPlatform === index ? "pt-30" : "py-20"
+                          }`}
+                        >
+                          {platform.title}
+                        </h3>
+                      )}
                       <p className="platform-text">{platform.description}</p>
                       {platform.urlP && (
                         <a href="#" className="platform-check">
@@ -158,8 +205,6 @@ function Multiplatform() {
                 )}
               </div>
             ))}
-            {/* </div> */}
-            {/* </div> */}
           </div>
         </div>
       </div>

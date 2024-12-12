@@ -6,13 +6,13 @@
 
 .carousel-track {
   display: flex;
-  gap: 20px; /* Adjust spacing between items */
-  animation: scroll 20s linear infinite;
+  gap: 20px;
+  animation: scrollStep 2s steps(1) infinite; /* Changed to 2s with 1 step */
 }
 
 .carousel-item {
   flex-shrink: 0;
-  width: 130px; /* Adjust logo width */
+  width: 130px;
 }
 
 .carousel-item img {
@@ -20,12 +20,33 @@
   height: auto;
 }
 
-/* Keyframes for scrolling */
-@keyframes scroll {
+/* Keyframes modified for single step movement */
+@keyframes scrollStep {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    /* Move exactly one item width */
+    transform: translateX(
+      calc(-1 * (130px + 20px))
+    ); /* single item × (width + gap) */
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 640px) {
+  .carousel-item {
+    width: 200px;
+  }
+
+  @keyframes scrollStep {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(
+        calc(-1 * (200px + 20px))
+      ); /* single item × (width + gap) */
+    }
   }
 }

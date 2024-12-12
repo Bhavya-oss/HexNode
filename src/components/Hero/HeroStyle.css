@@ -32,26 +32,26 @@ h1 {
 }
 
 .message-animate {
-  font-size: 40px;
+  font-size: 14px;
   color: transparent;
-  position: relative;
-  overflow: hidden;
 }
 
 .message-animate::before {
   position: absolute;
-  content: "css";
+  text-align: center;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  content: "Please enter your work email!";
   width: 100%;
   height: 0%; /* Start with height at 0% */
   color: white;
   overflow: hidden;
-  visibility: hidden; /* Initially hidden */
-  transition: height 3s ease-in-out, visibility 0s 3s; /* Transition height and visibility after 3s */
+  transition: height 0.7s ease-in-out; /* Corrected transition for height */
 }
 
 .message-animate.active::before {
   height: 100%; /* Expand height when active */
-  visibility: visible; /* Make the content visible after the transition */
 }
 
 .message {

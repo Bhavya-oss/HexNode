@@ -32,7 +32,7 @@ function EmailValidation({ heroRef }) {
     setTimeout(() => {
       setMessage("");
       setShowMessage(false);
-    }, 4000);
+    }, 3000);
   };
 
   return (
@@ -50,32 +50,25 @@ function EmailValidation({ heroRef }) {
           />
         </div>
         <div className="w-100 max-w-325 mt-15 mt-sm-0 max-w-sm-210">
-          <button type="submit" className="h-53 w-100 let-try" ref={heroRef}>
+          <button
+            onClick={() => {
+              setIsClicked(true);
+            }}
+            type="submit"
+            className="h-53 w-100 let-try"
+            ref={heroRef}
+          >
             Let's try it out
           </button>
         </div>
       </div>
-      {/* <button
-        className="let-try"
-        onClick={() => {
-          setIsClicked(true);
-          // setTimeout(() => setIsClicked(false), 3000);
-        }}
+
+      <p
+        className={`relative message-animate ${showMessage ? "active" : ""}`}
+        style={{ paddingLeft: "12px" }}
       >
-        click
-      </button>
-      <p className={`relative message-animate ${isClicked ? "active" : ""}`}>
         css
-      </p> */}
-      <div className="relative after-text text-center">
-        <span
-          className={`text-center message reveal-text ${
-            showMessage ? "show" : ""
-          }`}
-        >
-          {message}
-        </span>
-      </div>
+      </p>
     </form>
   );
 }

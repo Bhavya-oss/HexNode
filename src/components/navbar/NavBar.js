@@ -119,7 +119,9 @@ function NavBar({ navbarRef, isVisible }) {
                     } li-width-100`}
                   >
                     {" "}
-                    <a href="#why-hexnode">Why HexNode</a>
+                    <a href="#why-hexnode" onClick={() => setClicked(!clicked)}>
+                      Why HexNode
+                    </a>
                   </li>
                   <li
                     className={`${
@@ -129,7 +131,9 @@ function NavBar({ navbarRef, isVisible }) {
                     } li-width-100`}
                   >
                     {" "}
-                    <a href="#features">Features </a>
+                    <a href="#features" onClick={() => setClicked(!clicked)}>
+                      Features{" "}
+                    </a>
                   </li>
                   <li
                     className={`${
@@ -139,7 +143,9 @@ function NavBar({ navbarRef, isVisible }) {
                     } li-width-100`}
                   >
                     {" "}
-                    <a href="#platform">Platforms </a>
+                    <a href="#platform" onClick={() => setClicked(!clicked)}>
+                      Platforms{" "}
+                    </a>
                   </li>
                   <li
                     className={`${
@@ -149,12 +155,16 @@ function NavBar({ navbarRef, isVisible }) {
                     } li-width-100`}
                   >
                     {" "}
-                    <a href="#customers">Customers </a>
+                    <a href="#customers" onClick={() => setClicked(!clicked)}>
+                      Customers{" "}
+                    </a>
                   </li>
                 </ul>{" "}
                 <div className="btn-div">
                   {" "}
-                  <button>14 day free trail</button>
+                  <button onClick={() => setClicked(!clicked)}>
+                    14 day free trail
+                  </button>
                 </div>
                 {/* <div className="flex align-item-center">
               <p className="hidden-xl text-center">Login</p>
@@ -175,23 +185,6 @@ function NavBar({ navbarRef, isVisible }) {
             </nav>
           </div>
         </div>
-        {isVisible && (
-          <div
-            className="w-100 sticky-button flex mobile-sticky mobile
-          "
-            style={{
-              transform:
-                scrollDirection === "down"
-                  ? "translateY(-90px)"
-                  : "translateY(-10px)",
-            }}
-          >
-            <div className="">
-              {" "}
-              <button>14 day free trail</button>
-            </div>
-          </div>
-        )}
       </header>
     </>
   );
